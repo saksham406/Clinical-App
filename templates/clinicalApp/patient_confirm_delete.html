@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <title>Delete</title>
+        <link rel="stylesheet" href="{% static 'css/clinicals.css'%}"/>
+
+    </head>
+    <body>
+        <h2> Are your sure?<h2>
+            <h2>You want to delete {{patient.first_name}} 's record?</h2>
+            <form method="post">
+                {% csrf_token %}
+                <input type="submit" value="yes">
+                <a href="/">No</a>
+            </form>
+    </body>
+</html>

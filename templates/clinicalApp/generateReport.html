@@ -1,0 +1,26 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/clinicals.css'%}"/>
+ 
+        <title></title>
+    </head>
+    <body>
+       <h1>Clinical Data report: </h1>
+       <table border="3">
+        <thead>
+            <th>Component Name </th>
+            <th>Component Value </th>
+            <th>Date</th>
+        </thead>
+        {%for i in data %}
+        <tr>
+            <td>{{i.componentName}}</td>
+            <td>{{i.componentValue}}</td>
+            <td>{{i.measuredDateTime}}</td>
+        </tr>
+        {%endfor%}
+       </table>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/clinicals.css'%}"/>
+
+        <title>Add Patient</title>
+    </head>
+    <body>
+        <h2> Create Patient <h2>
+            <form method="POST">
+                {% csrf_token %}
+                <table>
+                    {{form.as_table}}
+                </table>
+            </br>
+            <input type="submit" value="Save">
+            </form>
+    </body>
+</html>
